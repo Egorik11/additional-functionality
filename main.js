@@ -1,13 +1,14 @@
+const header = document.querySelector('.lessons-list-timeline__header');
+const textInfo = header.children[1];
+const totalLessons = document.querySelector('.lessons-timeline').children;
+const countLessonsDontCompleted = document.querySelectorAll(
+  '.lessons-timeline__item-holder'
+).length;
+const lessonBadge = Array.from(
+  document.querySelectorAll('.lesson-header-badge')
+);
+
 function getInfoAboutLessons() {
-  const header = document.querySelector('.lessons-list-timeline__header');
-  const textInfo = header.children[1];
-  const totalLessons = document.querySelector('.lessons-timeline').children;
-  const countLessonsDontCompleted = document.querySelectorAll(
-    '.lessons-timeline__item-holder'
-  ).length;
-  const lessonBadge = Array.from(
-    document.querySelectorAll('.lesson-header-badge')
-  );
   const totalHomeWork = {
     completedHW: 0,
     notCompleted: 0,
